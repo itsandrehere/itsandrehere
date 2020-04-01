@@ -5,8 +5,8 @@ import MapView, { PROVIDER_GOOGLE , Marker, Callout} from "react-native-maps";
 let ScreenHeight = Dimensions.get("window").height;
 
 class MapV extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       coords: {
         latitude: null,
@@ -34,7 +34,7 @@ class MapV extends Component {
         longitudeDelta: 0.0421
       }
     });
-    console.log('value',this.state.coords);
+   // console.log('value',this.state.coords); 
   }
 
   render() {
@@ -56,6 +56,7 @@ class MapV extends Component {
                   <Callout
                     tooltip={true}
                     style={styles.callout}
+                    onPress={()=>{this.props.navigation.push('Detail')}}
                   >
                     <Text style={styles.title}>
 											Mi casa

@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Nav from './module/router/navigation/appNavigator'
+import StackMain from './navigator/MainStackNavigator'
 
 export default function App() {
   return (
     <View style={styles.container}>
-       <Nav/>
+        <StackMain/>
     </View>
   );
 }

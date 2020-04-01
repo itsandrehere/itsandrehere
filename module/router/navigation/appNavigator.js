@@ -1,14 +1,15 @@
   
 import React from 'react';
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createSwitchNavigator } from '@react-navigation/compat';
+import { NavigationContainer } from '@react-navigation/native';
+import formNavigator from './drawerMenu';
 
-import formNavigator from './navigator';
 
-export default createAppContainer(
+export default NavigationContainer(
   createSwitchNavigator({
     // Additional routes such as a login route could
     // be added here:
-    // Login: LoginNavigator,
+
     Main: formNavigator
   })
 );
